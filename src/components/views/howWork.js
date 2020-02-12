@@ -6,11 +6,10 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = theme => ({
   container: {
-    height: 400,
-    backgroundSize: "cover",
-    backgroundPosition: "center center",
-    opacity: "1",
-    display: "flex"
+    margin: "20px"
+  },
+  rightPicBlock: {
+    textAlign: "right"
   }
 });
 
@@ -25,11 +24,18 @@ class HowWork extends React.Component {
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}
+          className={classes.container}
         >
-          <Grid item sm={6}>
-            <h4>Second</h4>
+          <Grid item sm={6} xs={12} className={classes.rightPicBlock}>
+            <Typography variant="h4">Экономьте время</Typography>
+            <Typography variant="body1">
+              В среднем на поиск сервисного центра уходит 40 минут, благодаря
+              нашему сервису вам не придется тратить личное время, сотни
+              сервичных центров сами пришлют вам предложения по ремонту вашей
+              техники
+            </Typography>
           </Grid>
-          <Grid item sm={6}>
+          <Grid item sm={6} xs={12}>
             <img
               src={Time}
               style={{

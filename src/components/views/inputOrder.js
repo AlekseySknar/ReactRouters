@@ -31,9 +31,8 @@ class InputOrder extends React.Component {
               Получите предложение от сотни сервисов!
             </Typography>
           </Grid>
-          <Grid item sm={10}>
+          <Grid item sm={10} xs={9}>
             <TextField
-              className={classes.input}
               id="outlined-basic"
               label="Заказ"
               variant="outlined"
@@ -41,7 +40,7 @@ class InputOrder extends React.Component {
               fullWidth
             />
           </Grid>
-          <Grid item sm={2}>
+          <Grid item sm={2} xs={3}>
             <Button
               className={classes.orderButton}
               variant="contained"

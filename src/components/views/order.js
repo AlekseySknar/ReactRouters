@@ -10,11 +10,12 @@ import { display } from "@material-ui/system";
 const useStyles = theme => ({
   container: {
     height: 400,
-    backgroundImage: "url(" + BackImg + ")",
+    //    backgroundImage: "url(" + BackImg + ")",
     backgroundSize: "cover",
     backgroundPosition: "center center",
     opacity: "1",
-    display: "flex"
+    display: "flex",
+    margin: "8px"
   }
 });
 
@@ -25,12 +26,12 @@ class Order extends React.Component {
       <div className={classes.container}>
         <Grid
           container
-          spacing={1}
+          spacing={2}
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}
         >
-          <Grid item sm={6}>
+          <Grid item sm={6} xs={12}>
             <InputOrder />
           </Grid>
         </Grid>
