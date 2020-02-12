@@ -28,13 +28,13 @@ class InputOrder extends React.Component {
         <Grid container spacing={2}>
           <Grid item sm={12}>
             <Typography variant="h4">
-              Получите предложение от сотни сервисов!
+              Получите предложения от сотен сервисов!
             </Typography>
           </Grid>
           <Grid item sm={10} xs={9}>
             <TextField
               id="outlined-basic"
-              label="Заказ"
+              label="Неисправность"
               variant="outlined"
               color="secondary"
               fullWidth
@@ -58,7 +58,7 @@ class InputOrder extends React.Component {
               className={classes.exmp}
             >
               Например:{" "}
-              <Link href="#">Телевизор монтрровал, а он взорвался</Link>
+              <Link href="#">Телевизор монтировал, а он взорвался</Link>
             </Typography>
           </Grid>
         </Grid>

@@ -31,7 +31,7 @@ class Order extends React.Component {
           alignContent={"center"}
           justify={"center"}
         >
-          <Grid item sm={6} xs={12}>
+          <Grid item sm={10} xs={12} md={8}>
             <InputOrder />
           </Grid>
         </Grid>

@@ -9,9 +9,9 @@ const useStyles = theme => ({
     margin: "20px"
   },
   rightPicBlock: {
-    textAlign: "right",
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center"
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      textAlign: "right"
     }
   }
 });

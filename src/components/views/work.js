@@ -28,7 +28,7 @@ class Work extends React.Component {
           alignContent={"center"}
           justify={"center"}
         >
-          <Grid item sm={8} xs={12}>
+          <Grid item sm={10} xs={12} md={8}>
             <HowWork />
           </Grid>
         </Grid>
