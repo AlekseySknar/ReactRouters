@@ -1,8 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import HowWork from "./howWork";
+import Detals from "./detals";
 
 const useStyles = theme => ({
   container: {
@@ -16,7 +16,7 @@ const useStyles = theme => ({
   }
 });
 
-class Work extends React.Component {
+class DetalsMain extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -24,12 +24,12 @@ class Work extends React.Component {
         <Grid
           container
           spacing={2}
-          alignItems={"top"}
-          alignContent={"top"}
+          alignItems={"center"}
+          alignContent={"center"}
           justify={"center"}
         >
           <Grid item sm={10} xs={12} md={8}>
-            <HowWork />
+            <Detals />
           </Grid>
         </Grid>
       </div>
@@ -37,4 +37,4 @@ class Work extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(Work);
+export default withStyles(useStyles)(DetalsMain);
