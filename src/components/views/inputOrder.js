@@ -26,8 +26,8 @@ class InputOrder extends React.Component {
     return (
       <div>
         <Grid container spacing={2}>
-          <Grid item sm={10}>
-            <Typography variant="h5">
+          <Grid item sm={12}>
+            <Typography variant="h4">
               Получите предложение от сотни сервисов!
             </Typography>
           </Grid>
