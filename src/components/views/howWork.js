@@ -1,6 +1,8 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Time from "../../media/timepng.png";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = theme => ({
   container: {
@@ -16,7 +18,7 @@ class HowWork extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.container}>
+      <div>
         <Grid
           container
           spacing={1}
@@ -25,10 +27,17 @@ class HowWork extends React.Component {
           justify={"center"}
         >
           <Grid item sm={6}>
-            <h1>First</h1>
+            <h4>Second</h4>
           </Grid>
           <Grid item sm={6}>
-            <h1>Second</h1>
+            <img
+              src={Time}
+              style={{
+                height: "190px",
+                width: "190px"
+              }}
+              alt={"some"}
+            />
           </Grid>
         </Grid>
       </div>
