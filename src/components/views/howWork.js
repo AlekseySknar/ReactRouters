@@ -9,7 +9,10 @@ const useStyles = theme => ({
     margin: "20px"
   },
   rightPicBlock: {
-    textAlign: "right"
+    textAlign: "right",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center"
+    }
   }
 });
 
@@ -24,7 +27,6 @@ class HowWork extends React.Component {
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}
-          className={classes.container}
         >
           <Grid item sm={6} xs={12} className={classes.rightPicBlock}>
             <Typography variant="h4">Экономьте время</Typography>
