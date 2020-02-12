@@ -3,6 +3,8 @@ import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 const useStyles = theme => ({
   input: {
@@ -10,6 +12,10 @@ const useStyles = theme => ({
   },
   orderButton: {
     padding: "15px 16px"
+  },
+  exmp: {
+    textAlign: "left",
+    marginTop: "-12px"
   }
 });
 
@@ -20,6 +26,11 @@ class InputOrder extends React.Component {
     return (
       <div>
         <Grid container spacing={2}>
+          <Grid item sm={10}>
+            <Typography variant="h5">
+              Получите предложение от сотни сервисов!
+            </Typography>
+          </Grid>
           <Grid item sm={10}>
             <TextField
               className={classes.input}
@@ -41,8 +52,15 @@ class InputOrder extends React.Component {
               Поиск
             </Button>
           </Grid>
-          <Grid item sm={2}>
-            <h2>hello</h2>
+          <Grid item sm={12}>
+            <Typography
+              variant="subtitle2"
+              gutterBottom
+              className={classes.exmp}
+            >
+              Например:{" "}
+              <Link href="#">Телевизор монтрровал, а он взорвался</Link>
+            </Typography>
           </Grid>
         </Grid>
       </div>
