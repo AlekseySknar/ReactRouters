@@ -11,8 +11,9 @@ export default function App() {
     <div className="App">
       <CssBaseline />
       <ButtonAppBar />
+      {/*    
       <Order />
-      <Work />
+      <Work />*/}
       <DetalsMain />
     </div>
   );
