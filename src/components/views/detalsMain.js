@@ -24,8 +24,8 @@ class DetalsMain extends React.Component {
         <Grid
           container
           spacing={2}
-          alignItems={"center"}
-          alignContent={"center"}
+          alignItems={"flex-start"}
+          alignContent={"flex-start"}
           justify={"center"}
         >
           <Grid item sm={10} xs={12} md={8}>

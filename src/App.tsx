@@ -14,6 +14,7 @@ export default function App() {
       {/*    
       <Order />
       <Work />*/}
+      <div style={{ height: 50 }} />
       <DetalsMain />
     </div>
   );
