@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import CustomizedSteppers from "./steps";
 import TextField from "@material-ui/core/TextField";
 import DeviceButtons from "./deviceButtons";
+import MaufacturerList from "./manufacturerList";
 
 class Detals extends React.Component {
   render() {
@@ -31,6 +32,7 @@ class Detals extends React.Component {
             variant="outlined"
             fullWidth
           />
+          <MaufacturerList />
         </Paper>
       </div>
     );
