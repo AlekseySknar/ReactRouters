@@ -5,10 +5,15 @@ import Stepper from "@material-ui/core/Stepper";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
+import CustomizedSteppers from "./steps";
 
 class Detals extends React.Component {
   render() {
-    return <h1>What?</h1>;
+    return (
+      <div>
+        <CustomizedSteppers />
+      </div>
+    );
   }
 }
 
