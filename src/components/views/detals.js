@@ -7,7 +7,7 @@ import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import CustomizedSteppers from "./steps";
 import TextField from "@material-ui/core/TextField";
-import DeviceButtons from "./deviceButtons";
+import DeviceButtonsContainer from "../containers/deviceButtonsContainer";
 import MaufacturerList from "./manufacturerList";
 
 class Detals extends React.Component {
@@ -22,7 +22,7 @@ class Detals extends React.Component {
           <Typography variant="h3" style={{ textAlign: "left" }}>
             Тип устройства:
           </Typography>
-          <DeviceButtons />
+          <DeviceButtonsContainer />
           <Typography variant="h3" style={{ textAlign: "left" }}>
             Выберете марку:
           </Typography>

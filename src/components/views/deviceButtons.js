@@ -22,24 +22,29 @@ class DeviceButtins extends React.Component {
     return (
       <div className={classes.buttonContainer}>
         <Button
-          variant="outlined"
+          variant={this.props.activeButton === 0 ? "contained" : "outlined"}
+          color={this.props.activeButton === 0 ? "primary" : "default"}
           startIcon={<SmartphoneIcon />}
           className={classes.button}
+          onClick={() => this.props.handleClick(0)}
         >
           Смартфон
         </Button>
         <Button
-          variant="contained"
-          color="primary"
+          variant={this.props.activeButton === 1 ? "contained" : "outlined"}
+          color={this.props.activeButton === 1 ? "primary" : "default"}
           startIcon={<LaptopIcon />}
           className={classes.button}
+          onClick={() => this.props.handleClick(1)}
         >
           Ноутбук
         </Button>
         <Button
-          variant="outlined"
+          variant={this.props.activeButton === 2 ? "contained" : "outlined"}
           startIcon={<TabletMacIcon />}
+          color={this.props.activeButton === 2 ? "primary" : "default"}
           className={classes.button}
+          onClick={() => this.props.handleClick(2)}
         >
           Планшет
         </Button>
