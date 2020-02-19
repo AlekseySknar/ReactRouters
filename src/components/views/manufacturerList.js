@@ -1,15 +1,16 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import { PhonesList } from "../resurses/array";
 
 function doList() {
   const items = [];
-  for (let i = 0; i < 30; i++) {
+  PhonesList.map(value => {
     items.push(
-      <Grid item key={i} sm={4} md={3} xs={6}>
-        <h6>Apple</h6>
+      <Grid item key={value} sm={4} md={3} xs={6}>
+        <h6>{value}</h6>
       </Grid>
     );
-  }
+  });
   return items;
 }
 

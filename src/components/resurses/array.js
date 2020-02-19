@@ -1,4 +1,4 @@
-const PhonesList = [
+export const PhonesList = [
   "ACER",
   "ALCATEL",
   "ALLVIEW",
