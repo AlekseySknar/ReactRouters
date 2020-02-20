@@ -1,5 +1,6 @@
 import React from "react";
-import { Router, Route, browserHistory, IndexRoute } from "react-router";
+//import { Router, Route, browserHistory, IndexRoute } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 //TODO:
 //Разобраться с компонентом IndexRoute
 
@@ -11,10 +12,12 @@ import Main from "../components/views/home/home";
 import DetalsMain from "../components/views/order/detalsMain";
 
 export default (
-  <Router history={browserHistory}>
-    <Route component={MainLayout}>
-      <Route path="/" component={Main} />
-      <Route path="order" component={DetalsMain} />
-    </Route>
-  </Router>
+  <BrowserRouter>
+    <MainLayout>
+      <Switch>
+        <Route path="/" component={Main} />
+        <Route path="/order" component={DetalsMain} />
+      </Switch>
+    </MainLayout>
+  </BrowserRouter>
 );

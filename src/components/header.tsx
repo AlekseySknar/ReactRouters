@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Link } from "react-router"; //Обернуть кнопки в линки
+import { Link } from "react-router-dom"; //Обернуть кнопки в линки
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +39,11 @@ export default function AppHeader() {
           <Button color="inherit" className={classes.title}>
             Красноярск
           </Button>
+
+          <Button color="inherit">
+            <Link to="/order">Заявка</Link>
+          </Button>
+
           <Button color="inherit">Поиск на карте</Button>
           <Button color="inherit">Вы сервис?</Button>
           <Button color="inherit">Войти</Button>
