@@ -7,7 +7,7 @@ import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import CustomizedSteppers from "./steps";
 import TextField from "@material-ui/core/TextField";
-import DeviceButtonsContainer from "../containers/deviceButtonsContainer";
+import DeviceButtonsContainer from "../../containers/deviceButtonsContainer";
 import MaufacturerList from "./manufacturerList";
 
 class Detals extends React.Component {

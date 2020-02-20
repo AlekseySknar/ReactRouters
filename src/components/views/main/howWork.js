@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Time from "../../media/timepng.png";
+import Time from "../../../media/timepng.png";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = theme => ({

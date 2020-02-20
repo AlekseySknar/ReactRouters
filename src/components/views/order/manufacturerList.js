@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { PhonesList } from "../resurses/array";
+import { PhonesList } from "../../resurses/array";
 
 function doList() {
   const valueField = "Ap";

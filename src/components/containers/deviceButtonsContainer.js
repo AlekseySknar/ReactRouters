@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DeviceButtons from "../views/deviceButtons";
+import DeviceButtons from "../views/order/deviceButtons";
 
 class DeviceButtonsContainer extends Component {
   constructor(props) {
