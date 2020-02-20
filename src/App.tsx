@@ -5,17 +5,8 @@ import Order from "./components/views/order";
 import Work from "./components/views/work";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import DetalsMain from "./components/views/order/detalsMain";
+import router from "./router/router";
 
 export default function App() {
-  return (
-    <div className="App">
-      <CssBaseline />
-      <ButtonAppBar />
-      {/*    
-      <Order />
-      <Work />*/}
-      <div style={{ height: 50 }} />
-      <DetalsMain />
-    </div>
-  );
+  return { router };
 }
