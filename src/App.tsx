@@ -8,5 +8,5 @@ import DetalsMain from "./components/views/order/detalsMain";
 import router from "./router/router";
 
 export default function App() {
-  return { router };
+  return <div> {router} </div>;
 }
