@@ -23,6 +23,7 @@ export const PhonesList = [
   "CHEA",
   "COOLPAD",
   "DELL",
+  "DEXP",
   "EMPORIA",
   "ENERGIZER",
   "ERICSSON",
