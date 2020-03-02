@@ -1,14 +1,20 @@
 import React from "react";
-import Detals from "./inputOrder";
+import InputOrder from "./inputOrder";
 import Work from "./work";
+import Grid from "@material-ui/core/Grid";
 
 export default class Main extends React.Component {
   render() {
     return (
-      <div>
-        <Detals />
+      <Grid
+        container
+        alignItems={"center"}
+        alignContent={"center"}
+        justify={"center"}
+      >
+        <InputOrder />
         <Work />
-      </div>
+      </Grid>
     );
   }
 }

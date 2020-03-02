@@ -36,12 +36,12 @@ export default function AppHeader() {
           >
             <MenuIcon />
           </IconButton>
-          <Button color="inherit" className={classes.title}>
+          <Button color="inherit" className={classes.title} href="/">
             Красноярск
           </Button>
 
-          <Button color="inherit">
-            <Link to="/order">Заявка</Link>
+          <Button color="inherit" href="/order">
+            Заявка
           </Button>
 
           <Button color="inherit">Поиск на карте</Button>

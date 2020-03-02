@@ -25,7 +25,16 @@ class InputOrder extends React.Component {
 
     return (
       <div>
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={2}
+          sm={10}
+          xs={12}
+          md={8}
+          alignItems={"center"}
+          alignContent={"center"}
+          justify={"center"}
+        >
           <Grid item sm={12}>
             <Typography variant="h4">
               Получите предложения от сотен сервисов!

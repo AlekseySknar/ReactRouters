@@ -15,7 +15,7 @@ export default (
   <BrowserRouter>
     <MainLayout>
       <Switch>
-        <Route path="/" component={Main} />
+        <Route exact path="/" component={Main} />
         <Route path="/order" component={DetalsMain} />
       </Switch>
     </MainLayout>
