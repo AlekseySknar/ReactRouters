@@ -6,9 +6,8 @@ import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import CustomizedSteppers from "./steps";
-import TextField from "@material-ui/core/TextField";
 import DeviceButtonsContainer from "../../containers/order/deviceButtonsContainer";
-import MaufacturerList from "./manufacturerList";
+import ManufacturesContainer from "../../containers/order/manufacturersContainer";
 
 class Detals extends React.Component {
   render() {
@@ -23,16 +22,7 @@ class Detals extends React.Component {
             Тип устройства:
           </Typography>
           <DeviceButtonsContainer />
-          <Typography variant="h3" style={{ textAlign: "left" }}>
-            Выберете марку:
-          </Typography>
-          <TextField
-            id="outlined-basic"
-            label="Марка"
-            variant="outlined"
-            fullWidth
-          />
-          <MaufacturerList />
+          <ManufacturesContainer />
         </Paper>
       </div>
     );

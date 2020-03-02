@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 class DeviceButtonsContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeButton: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
 
