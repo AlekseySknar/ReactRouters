@@ -5,9 +5,5 @@ import store from "./store";
 import { Provider } from "react-redux";
 
 export default function App() {
-  return (
-    <Provider store={store}>
-      <div> {router} </div>
-    </Provider>
-  );
+  return <Provider store={store}>{router}</Provider>;
 }

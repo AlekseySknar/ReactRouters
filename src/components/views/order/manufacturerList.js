@@ -2,10 +2,9 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { PhonesList } from "../../resurses/array";
 
-function doList() {
-  const valueField = "Ap";
+function doList(manufacturer = "") {
   const itemsFilter = PhonesList.filter(
-    value => value.indexOf(valueField.toUpperCase()) === 0
+    value => value.indexOf(manufacturer.toUpperCase()) === 0
   );
 
   var items = [];
@@ -24,7 +23,7 @@ class ManufacturerList extends React.Component {
     return (
       <div>
         <Grid container spacing={1}>
-          {doList()}
+          {doList(this.props.manufacturer)}
         </Grid>
       </div>
     );

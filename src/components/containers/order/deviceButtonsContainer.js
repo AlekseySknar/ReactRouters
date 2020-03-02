@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import DeviceButtons from "../views/order/deviceButtons";
-import store from "../../store";
-import { changeDeviceType } from "../../redux/actions/actionOrder";
+import DeviceButtons from "../../views/order/deviceButtons";
+import store from "../../../store";
+import { changeDeviceType } from "../../../redux/actions/actionOrder";
 import { connect } from "react-redux";
 
 class DeviceButtonsContainer extends Component {
@@ -12,8 +12,6 @@ class DeviceButtonsContainer extends Component {
   }
 
   handleClick(buttonID) {
-    console.log("click! " + buttonID);
-    //this.setState({ activeButton: buttonID });
     store.dispatch(changeDeviceType(buttonID));
   }
 
@@ -21,7 +19,7 @@ class DeviceButtonsContainer extends Component {
     return (
       <DeviceButtons
         handleClick={this.handleClick}
-        activeButton={this.state.activeButton}
+        activeButton={this.props.activeButton}
       />
     );
   }
