@@ -14,6 +14,7 @@ class ManufacturesContainer extends React.Component {
 
   handleChangeManufacturer(event) {
     this.setState({ manufacturer: event.target.value });
+    store.dispatch(changeManufacturer(""));
   }
 
   handleClickManufacturer(manufacturer) {

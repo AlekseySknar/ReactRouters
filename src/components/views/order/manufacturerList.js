@@ -18,7 +18,7 @@ function doList(props) {
           fullWidth
           variant={props.selectedManufacture === value ? "contained" : "text"}
           color={props.selectedManufacture === value ? "primary" : "default"}
-          onClick={() => props.handleClick(value.id)}
+          onClick={() => props.handleClick(value)}
         >
           {value}
         </Button>
