@@ -16,6 +16,9 @@ const useStyles = theme => ({
   exmp: {
     textAlign: "left",
     marginTop: "-12px"
+  },
+  slogan: {
+    textAlign: "center"
   }
 });
 
@@ -27,45 +30,46 @@ class InputOrder extends React.Component {
       <div>
         <Grid
           container
-          spacing={2}
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}
         >
           <Grid item sm={12}>
-            <Typography variant="h4">
-              Получите предложения от сотен сервисов!
-            </Typography>
-          </Grid>
-          <Grid item sm={10} xs={9}>
-            <TextField
-              id="outlined-basic"
-              label="Неисправность"
-              variant="outlined"
-              color="secondary"
-              fullWidth
-            />
-          </Grid>
-          <Grid item sm={2} xs={3}>
-            <Button
-              className={classes.orderButton}
-              variant="contained"
-              color="primary"
-              href="#contained-buttons"
-              fullWidth
-            >
-              Поиск
-            </Button>
-          </Grid>
-          <Grid item sm={12}>
-            <Typography
-              variant="subtitle2"
-              gutterBottom
-              className={classes.exmp}
-            >
-              Например:{" "}
-              <Link href="#">Телевизор монтировал, а он взорвался</Link>
-            </Typography>
+            <Grid item sm={12}>
+              <Typography variant="h4" className={classes.slogan}>
+                Получите предложения от сотен сервисов!
+              </Typography>
+            </Grid>
+            <Grid item sm={10} xs={9}>
+              <TextField
+                id="outlined-basic"
+                label="Неисправность"
+                variant="outlined"
+                color="secondary"
+                fullWidth
+              />
+            </Grid>
+            <Grid item sm={2} xs={3}>
+              <Button
+                className={classes.orderButton}
+                variant="contained"
+                color="primary"
+                href="#contained-buttons"
+                fullWidth
+              >
+                Поиск
+              </Button>
+            </Grid>
+            <Grid item sm={12}>
+              <Typography
+                variant="subtitle2"
+                gutterBottom
+                className={classes.exmp}
+              >
+                Например:{" "}
+                <Link href="#">Телевизор монтировал, а он взорвался</Link>
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </div>
