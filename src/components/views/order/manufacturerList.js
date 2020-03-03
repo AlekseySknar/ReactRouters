@@ -3,17 +3,25 @@ import Grid from "@material-ui/core/Grid";
 import { PhonesList } from "../../resurses/array";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
-function doList(manufacturer = "") {
+function doList(props) {
   const itemsFilter = PhonesList.filter(
-    value => value.indexOf(manufacturer.toUpperCase()) === 0
+    value => value.indexOf(props.manufacturer.toUpperCase()) === 0
   );
 
   var items = [];
   itemsFilter.map(value => {
     items.push(
       <Grid item key={value} sm={4} md={3} xs={6}>
-        <h6>{value}</h6>
+        <Button
+          fullWidth
+          variant={props.selectedManufacture === value ? "contained" : "text"}
+          color={props.selectedManufacture === value ? "primary" : "default"}
+          onClick={() => props.handleClick(value.id)}
+        >
+          {value}
+        </Button>
       </Grid>
     );
   });
@@ -35,8 +43,14 @@ class ManufacturerList extends React.Component {
           onChange={this.props.handleChangeManufacturer}
           fullWidth
         />
-        <Grid container spacing={1}>
-          {doList(this.props.manufacturer)}
+        <Grid
+          container
+          spacing={2}
+          alignItems={"center"}
+          alignContent={"center"}
+          justify={"center"}
+        >
+          {doList(this.props)}
         </Grid>
       </div>
     );

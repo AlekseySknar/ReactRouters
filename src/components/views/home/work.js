@@ -21,13 +21,7 @@ class Work extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.container}>
-        <Grid
-          container
-          spacing={2}
-          alignItems={"top"}
-          alignContent={"top"}
-          justify={"center"}
-        >
+        <Grid container spacing={2} justify={"center"}>
           <Grid item sm={10} xs={12} md={8}>
             <HowWork />
           </Grid>

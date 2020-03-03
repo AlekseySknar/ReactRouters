@@ -28,9 +28,6 @@ class InputOrder extends React.Component {
         <Grid
           container
           spacing={2}
-          sm={10}
-          xs={12}
-          md={8}
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}

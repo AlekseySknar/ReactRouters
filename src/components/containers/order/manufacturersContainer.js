@@ -7,19 +7,26 @@ import { changeManufacturer } from "../../../redux/actions/actionOrder";
 class ManufacturesContainer extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { manufacturer: "" };
     this.handleChangeManufacturer = this.handleChangeManufacturer.bind(this);
+    this.handleClickManufacturer = this.handleClickManufacturer.bind(this);
   }
 
   handleChangeManufacturer(event) {
-    console.log(event);
-    store.dispatch(changeManufacturer(event.target.value));
+    this.setState({ manufacturer: event.target.value });
   }
 
+  handleClickManufacturer(manufacturer) {
+    console.log(manufacturer);
+    store.dispatch(changeManufacturer(manufacturer));
+  }
   render() {
     return (
       <ManufacturerList
-        manufacturer={this.props.manufacturer}
+        manufacturer={this.state.manufacturer}
+        selectedManufacture={this.props.selectedManufacture}
         handleChangeManufacturer={this.handleChangeManufacturer}
+        handleClick={this.handleClickManufacturer}
       />
     );
   }
@@ -27,7 +34,7 @@ class ManufacturesContainer extends React.Component {
 
 const mapStateToProps = function(store) {
   return {
-    manufacturer: store.orderState.manufacturer
+    selectedManufacture: store.orderState.manufacturer
   };
 };
 

@@ -16,7 +16,7 @@ export function changeDeviceType(deviceType) {
 
 export function changeManufacturer(manufacturer) {
   return {
-    type: types.CHANGE_MANUFACTURERE,
+    type: types.CHANGE_MANUFACTURER,
     manufacturer
   };
 }
