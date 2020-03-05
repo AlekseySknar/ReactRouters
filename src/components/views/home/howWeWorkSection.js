@@ -23,7 +23,7 @@ class HowWork extends React.Component {
       <div>
         <Grid
           container
-          spacing={1}
+          spacing={2}
           alignItems={"center"}
           alignContent={"center"}
           justify={"center"}

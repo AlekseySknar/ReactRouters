@@ -1,20 +1,15 @@
 import React from "react";
 import InputOrder from "./inputOrder";
-import Work from "./work";
-import Grid from "@material-ui/core/Grid";
+import Container from "@material-ui/core/Container";
+import HowWork from "./howWeWorkSection.js";
 
 export default class Main extends React.Component {
   render() {
     return (
-      <Grid
-        container
-        alignItems={"center"}
-        alignContent={"center"}
-        justify={"center"}
-      >
+      <Container maxWidth="md">
         <InputOrder />
-        <Work />
-      </Grid>
+        <HowWork />
+      </Container>
     );
   }
 }
