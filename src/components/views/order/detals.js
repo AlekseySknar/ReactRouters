@@ -8,22 +8,25 @@ import Typography from "@material-ui/core/Typography";
 import CustomizedSteppers from "./steps";
 import DeviceButtonsContainer from "../../containers/order/deviceButtonsContainer";
 import ManufacturesContainer from "../../containers/order/manufacturersContainer";
+import Container from "@material-ui/core/Container";
 
 class Detals extends React.Component {
   render() {
     return (
       <div style={{ marginTop: 20 }}>
-        <Paper>
-          <Typography variant="h3" style={{ textAlign: "left" }}>
-            Заявка.
-          </Typography>
-          {/*<CustomizedSteppers /> */}
-          <Typography variant="h3" style={{ textAlign: "left" }}>
-            Тип устройства:
-          </Typography>
-          <DeviceButtonsContainer />
-          <ManufacturesContainer />
-        </Paper>
+        <Container maxWidth="md">
+          <Paper>
+            <Typography variant="h3" style={{ textAlign: "left" }}>
+              Заявка.
+            </Typography>
+            {/*<CustomizedSteppers /> */}
+            <Typography variant="h3" style={{ textAlign: "left" }}>
+              Тип устройства:
+            </Typography>
+            <DeviceButtonsContainer />
+            <ManufacturesContainer />
+          </Paper>
+        </Container>
       </div>
     );
   }
