@@ -25,8 +25,11 @@ class Detals extends React.Component {
               Тип устройства:
             </Typography>
             <DeviceButtonsContainer />
-            <DeviceInfoContainer />
-            <ManufacturesContainer />
+            {this.props.manufacturer === "" ? (
+              <ManufacturesContainer />
+            ) : (
+              <DeviceInfoContainer />
+            )}
           </Paper>
         </Container>
       </div>
