@@ -20,7 +20,7 @@ class ManufacturesContainer extends React.Component {
   }
 
   handleClickManufacturer(manufacturer) {
-    store.dispatch(changeManufacturerFilter(manufacturer));
+    store.dispatch(changeManufacturer(manufacturer));
   }
   render() {
     return (
@@ -36,7 +36,7 @@ class ManufacturesContainer extends React.Component {
 
 const mapStateToProps = function(store) {
   return {
-    selectedManufacture: store.orderState.manufacturerFilter
+    selectedManufacture: store.orderState.manufacturer
   };
 };
 
