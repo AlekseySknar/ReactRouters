@@ -14,12 +14,12 @@ class ManufacturesContainer extends React.Component {
   }
 
   handleChangeManufacturer(event) {
+    console.log("ss");
     this.setState({ manufacturer: event.target.value });
     store.dispatch(changeManufacturer(""));
   }
 
   handleClickManufacturer(manufacturer) {
-    console.log(manufacturer);
     store.dispatch(changeManufacturerFilter(manufacturer));
   }
   render() {

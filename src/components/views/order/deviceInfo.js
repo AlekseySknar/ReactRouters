@@ -7,21 +7,23 @@ import ClearIcon from "@material-ui/icons/Clear";
 import OutlinedInput from "@material-ui/core/OutlinedInput";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
+import Grid from "@material-ui/core/Grid";
 
 class DeviceInfoInput extends React.Component {
   render() {
     return (
-      <div>
-        <div>
-          <FormControl variant="outlined">
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6}>
+          <FormControl variant="outlined" fullWidth>
             <InputLabel htmlFor="standard-adornment-password">
               Производитель
             </InputLabel>
             <OutlinedInput
               id="standard-adornment-password"
+              value={this.props.manufacturer}
               endAdornment={
                 <InputAdornment position="end">
-                  <IconButton aria-label="toggle password visibility">
+                  <IconButton onClick={this.props.handleClickClear}>
                     <ClearIcon />
                   </IconButton>
                 </InputAdornment>
@@ -29,18 +31,16 @@ class DeviceInfoInput extends React.Component {
               labelWidth={120}
             />
           </FormControl>
-        </div>
-        <div>
+        </Grid>
+        <Grid item xs={12} sm={6}>
           <TextField
             id="outlined-basic"
-            label="Марка"
+            label="Модель"
             variant="outlined"
-            value={this.props.manufacturer}
-            onChange={this.props.handleChangeManufacturer}
             fullWidth
           />
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     );
   }
 }

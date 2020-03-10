@@ -9,7 +9,7 @@ import CustomizedSteppers from "./steps";
 import DeviceButtonsContainer from "../../containers/order/deviceButtonsContainer";
 import ManufacturesContainer from "../../containers/order/manufacturersContainer";
 import Container from "@material-ui/core/Container";
-import DeviceInfoInput from "./deviceInfo";
+import DeviceInfoContainer from "../../containers/order/deviceInfoContainer";
 
 class Detals extends React.Component {
   render() {
@@ -25,7 +25,7 @@ class Detals extends React.Component {
               Тип устройства:
             </Typography>
             <DeviceButtonsContainer />
-            <DeviceInfoInput />
+            <DeviceInfoContainer />
             <ManufacturesContainer />
           </Paper>
         </Container>
