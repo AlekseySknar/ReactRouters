@@ -6,11 +6,13 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
 function doList(props) {
+  var items = [];
+  const otherButtonName = "Other";
+
   const itemsFilter = PhonesList.filter(
     value => value.indexOf(props.manufacturer.toUpperCase()) === 0
   );
 
-  var items = [];
   itemsFilter.map(value => {
     items.push(
       <Grid item key={value} sm={4} md={3} xs={6}>
@@ -25,6 +27,23 @@ function doList(props) {
       </Grid>
     );
   });
+  //Добавляем вариант "Другое"
+  items.push(
+    <Grid item key={otherButtonName} sm={4} md={3} xs={6}>
+      <Button
+        fullWidth
+        variant={
+          props.selectedManufacture === otherButtonName ? "contained" : "text"
+        }
+        color={
+          props.selectedManufacture === otherButtonName ? "primary" : "default"
+        }
+        onClick={() => props.handleClick(otherButtonName)}
+      >
+        Другое
+      </Button>
+    </Grid>
+  );
   return items;
 }
 

@@ -20,3 +20,10 @@ export function changeManufacturer(manufacturer) {
     manufacturer
   };
 }
+
+export function changeManufacturerFilter(manufacturer) {
+  return {
+    type: types.CHANGE_MANUFACTURER_FILTER,
+    manufacturer
+  };
+}

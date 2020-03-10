@@ -3,6 +3,7 @@ import ManufacturerList from "../../views/order/manufacturerList";
 import store from "../../../store";
 import { connect } from "react-redux";
 import { changeManufacturer } from "../../../redux/actions/actionOrder";
+import { changeManufacturerFilter } from "../../../redux/actions/actionOrder";
 
 class ManufacturesContainer extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class ManufacturesContainer extends React.Component {
 
   handleClickManufacturer(manufacturer) {
     console.log(manufacturer);
-    store.dispatch(changeManufacturer(manufacturer));
+    store.dispatch(changeManufacturerFilter(manufacturer));
   }
   render() {
     return (
@@ -35,7 +36,7 @@ class ManufacturesContainer extends React.Component {
 
 const mapStateToProps = function(store) {
   return {
-    selectedManufacture: store.orderState.manufacturer
+    selectedManufacture: store.orderState.manufacturerFilter
   };
 };
 
