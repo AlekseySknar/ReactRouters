@@ -32,18 +32,30 @@ class Order extends React.Component {
     }
   }
 
-  gerButtons() {
+  getButtons() {
     switch (this.props.step) {
       case 0:
-        return (
-          <div>
-            <Grid container spacing={2}>
-              <Grid item xs={6} sm={3}>
-                <Button>Далее</Button>
+        //В списке производителей кнопка не нужна
+        if (this.props.manufacturer === "") {
+          return null;
+        } else {
+          return (
+            <div>
+              <Grid container spacing={2} justify={"flex-end"}>
+                <Grid item xs={6} sm={3}>
+                  <Button
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    onClick={this.props.handleClickNext}
+                  >
+                    Далее
+                  </Button>
+                </Grid>
               </Grid>
-            </Grid>
-          </div>
-        );
+            </div>
+          );
+        }
       default:
         return null;
     }
@@ -59,6 +71,7 @@ class Order extends React.Component {
             </Typography>
             <Steps />
             {this.getContent()}
+            {this.getButtons()}
           </Paper>
         </Container>
       </div>

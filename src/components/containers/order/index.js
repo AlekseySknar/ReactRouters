@@ -6,11 +6,26 @@ import store from "../../../store";
 import { connect } from "react-redux";
 import { changeManufacturer } from "../../../redux/actions/actionOrder";
 import { changeOrderStep } from "../../../redux/actions/actionOrder";
+import { nextOrderStep } from "../../../redux/actions/actionOrder";
 
 class OrderContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClickNextStep = this.handleClickNextStep.bind(this);
+  }
+
+  handleClickNextStep() {
+    console.log("lol");
+    store.dispatch(nextOrderStep());
+  }
+
   render() {
     return (
-      <Order manufacturer={this.props.manufacturer} step={this.props.step} />
+      <Order
+        manufacturer={this.props.manufacturer}
+        step={this.props.step}
+        handleClickNext={this.handleClickNextStep}
+      />
     );
   }
 }

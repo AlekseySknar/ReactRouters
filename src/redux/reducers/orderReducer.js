@@ -25,6 +25,11 @@ const orderReducer = function(state = initialState, action) {
       return Object.assign({}, state, {
         step: action.step
       });
+    case types.NEXT_ORDER_STEP:
+      const nextStep = state.step++;
+      return Object.assign({}, state, {
+        step: nextStep
+      });
     default:
       return state;
   }

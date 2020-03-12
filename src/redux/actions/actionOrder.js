@@ -34,3 +34,9 @@ export function changeOrderStep(step) {
     step
   };
 }
+
+export function nextOrderStep() {
+  return {
+    type: types.NEXT_ORDER_STEP
+  };
+}
