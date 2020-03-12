@@ -5,7 +5,7 @@ const initialState = {
   deviceType: 0,
   manufacturer: "",
   manufacturerFilter: "",
-  step: 1
+  step: 0
 };
 
 const orderReducer = function(state = initialState, action) {
@@ -21,6 +21,10 @@ const orderReducer = function(state = initialState, action) {
         manufacturerFilter: action.manufacturer
       });
 
+    case types.CHANGE_ORDER_STEP:
+      return Object.assign({}, state, {
+        step: action.step
+      });
     default:
       return state;
   }

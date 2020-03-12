@@ -18,8 +18,8 @@ function doList(props) {
       <Grid item key={value} sm={4} md={3} xs={6}>
         <Button
           fullWidth
-          variant={props.selectedManufacture === value ? "contained" : "text"}
-          color={props.selectedManufacture === value ? "primary" : "default"}
+          variant="text"
+          color="default"
           onClick={() => props.handleClick(value)}
         >
           {value}
@@ -32,12 +32,8 @@ function doList(props) {
     <Grid item key={otherButtonName} sm={4} md={3} xs={6}>
       <Button
         fullWidth
-        variant={
-          props.selectedManufacture === otherButtonName ? "contained" : "text"
-        }
-        color={
-          props.selectedManufacture === otherButtonName ? "primary" : "default"
-        }
+        variant="text"
+        color="default"
         onClick={() => props.handleClick(otherButtonName)}
       >
         Другое

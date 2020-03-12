@@ -8,6 +8,7 @@ import OutlinedInput from "@material-ui/core/OutlinedInput";
 import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 class DeviceInfoInput extends React.Component {
   render() {
@@ -39,6 +40,11 @@ class DeviceInfoInput extends React.Component {
             variant="outlined"
             fullWidth
           />
+        </Grid>
+        <Grid item xs={12}>
+          <Button fullWidth onClick={this.props.handleClickNext}>
+            Далее
+          </Button>
         </Grid>
       </Grid>
     );

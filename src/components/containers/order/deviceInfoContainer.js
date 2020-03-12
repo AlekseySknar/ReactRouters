@@ -4,11 +4,13 @@ import store from "../../../store";
 //import { changeDeviceType } from "../../../redux/actions/actionOrder";
 import { connect } from "react-redux";
 import { changeManufacturer } from "../../../redux/actions/actionOrder";
+import { changeOrderStep } from "../../../redux/actions/actionOrder";
 
 class DeviceInfoContainer extends React.Component {
   constructor(props) {
     super(props);
     this.handleClickClear = this.handleClickClear.bind(this);
+    this.handleClickNext = this.handleClickNext.bind(this);
   }
 
   render() {
@@ -16,13 +18,18 @@ class DeviceInfoContainer extends React.Component {
       <DeviceInfoInput
         handleClickClear={this.handleClickClear}
         manufacturer={this.props.manufacturer}
+        handleClickNext={this.handleClickNext}
       />
     );
   }
 
+  handleClickNext() {
+    store.dispatch(changeOrderStep(1));
+  }
+
   handleClickClear() {
-    console.log("Clear!");
     store.dispatch(changeManufacturer(""));
+    store.dispatch(changeOrderStep(0));
   }
 }
 

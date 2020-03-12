@@ -27,3 +27,10 @@ export function changeManufacturerFilter(manufacturer) {
     manufacturer
   };
 }
+
+export function changeOrderStep(step) {
+  return {
+    type: types.CHANGE_ORDER_STEP,
+    step
+  };
+}

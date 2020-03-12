@@ -7,7 +7,7 @@ import TabletMacIcon from "@material-ui/icons/TabletMac";
 
 const useStyles = theme => ({
   buttonContainer: {
-    textAlign: "left"
+    textAlign: "center"
   },
   button: {
     marginTop: theme.spacing(2),
