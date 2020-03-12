@@ -9,14 +9,14 @@ import MainLayout from "../components/layouts/main";
 
 // Pages
 import Main from "../components/views/home/home";
-import DetalsContainer from "../components/containers/order/detalsContainer";
+import OrderContainer from "../components/containers/order/";
 
 export default (
   <BrowserRouter>
     <MainLayout>
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route path="/order" component={DetalsContainer} />
+        <Route path="/order" component={OrderContainer} />
       </Switch>
     </MainLayout>
   </BrowserRouter>

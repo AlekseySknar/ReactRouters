@@ -41,11 +41,6 @@ class DeviceInfoInput extends React.Component {
             fullWidth
           />
         </Grid>
-        <Grid item xs={12}>
-          <Button fullWidth onClick={this.props.handleClickNext}>
-            Далее
-          </Button>
-        </Grid>
       </Grid>
     );
   }

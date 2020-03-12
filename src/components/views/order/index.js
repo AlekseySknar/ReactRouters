@@ -7,10 +7,13 @@ import Container from "@material-ui/core/Container";
 import DeviceButtonsContainer from "../../containers/order/deviceButtonsContainer";
 import ManufacturesContainer from "../../containers/order/manufacturersContainer";
 import DeviceInfoContainer from "../../containers/order/deviceInfoContainer";
+import ProblemDescription from "./problemDescription";
+import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 class Order extends React.Component {
-  getContent(step) {
-    switch (step) {
+  getContent() {
+    switch (this.props.step) {
       case 0:
         return (
           <div>
@@ -20,6 +23,25 @@ class Order extends React.Component {
             ) : (
               <DeviceInfoContainer />
             )}
+          </div>
+        );
+      case 1:
+        return <ProblemDescription />;
+      default:
+        return null;
+    }
+  }
+
+  gerButtons() {
+    switch (this.props.step) {
+      case 0:
+        return (
+          <div>
+            <Grid container spacing={2}>
+              <Grid item xs={6} sm={3}>
+                <Button>Далее</Button>
+              </Grid>
+            </Grid>
           </div>
         );
       default:
@@ -36,8 +58,8 @@ class Order extends React.Component {
               Заявка.
             </Typography>
             <Steps />
+            {this.getContent()}
           </Paper>
-          {this.getContent(this.props.step)}
         </Container>
       </div>
     );
