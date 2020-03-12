@@ -40,3 +40,9 @@ export function nextOrderStep() {
     type: types.NEXT_ORDER_STEP
   };
 }
+
+export function prevOrderStep() {
+  return {
+    type: types.PREV_ORDER_STEP
+  };
+}

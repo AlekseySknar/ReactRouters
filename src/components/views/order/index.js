@@ -32,6 +32,34 @@ class Order extends React.Component {
     }
   }
 
+  getPrimatyButton(text) {
+    return (
+      <Button
+        id={this.props.step + "prev"}
+        fullWidth
+        variant="contained"
+        color="primary"
+        onClick={this.props.handleClickNext}
+      >
+        {text}
+      </Button>
+    );
+  }
+
+  getDefaultButton(text) {
+    return (
+      <Button
+        id={this.props.step + "next"}
+        fullWidth
+        variant="contained"
+        color="default"
+        onClick={this.props.handleClickPrev}
+      >
+        {text}
+      </Button>
+    );
+  }
+
   getButtons() {
     switch (this.props.step) {
       case 0:
@@ -43,19 +71,38 @@ class Order extends React.Component {
             <div>
               <Grid container spacing={2} justify={"flex-end"}>
                 <Grid item xs={6} sm={3}>
-                  <Button
-                    fullWidth
-                    variant="contained"
-                    color="primary"
-                    onClick={this.props.handleClickNext}
-                  >
-                    Далее
-                  </Button>
+                  {this.getPrimatyButton("Далее")}
                 </Grid>
               </Grid>
             </div>
           );
         }
+      case 1:
+        return (
+          <div>
+            <Grid container spacing={2} justify={"flex-end"}>
+              <Grid item xs={6} sm={3}>
+                {this.getDefaultButton("Назад")}
+              </Grid>
+              <Grid item xs={6} sm={3}>
+                {this.getPrimatyButton("Далее")}
+              </Grid>
+            </Grid>
+          </div>
+        );
+      case 2:
+        return (
+          <div>
+            <Grid container spacing={2} justify={"flex-end"}>
+              <Grid item xs={6} sm={3}>
+                {this.getDefaultButton("Назад")}
+              </Grid>
+              <Grid item xs={6} sm={3}>
+                {this.getPrimatyButton("Завершить")}
+              </Grid>
+            </Grid>
+          </div>
+        );
       default:
         return null;
     }
