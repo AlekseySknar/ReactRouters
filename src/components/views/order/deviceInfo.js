@@ -35,7 +35,9 @@ class DeviceInfoInput extends React.Component {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
-            id="outlined-basic"
+            error={this.props.hasError}
+            value={this.props.model}
+            onChange={this.handleChangeModel}
             label="Модель"
             variant="outlined"
             fullWidth

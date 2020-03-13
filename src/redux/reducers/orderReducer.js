@@ -5,6 +5,7 @@ const initialState = {
   deviceType: 0,
   manufacturer: "",
   manufacturerFilter: "",
+  model: "",
   step: 0
 };
 
@@ -35,6 +36,8 @@ const orderReducer = function(state = initialState, action) {
       return Object.assign({}, state, {
         step: prevStep
       });
+    case types.CHANGE_MODEL:
+      return Object.assign({}, state, { model: action.model });
     default:
       return state;
   }

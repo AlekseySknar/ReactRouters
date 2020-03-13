@@ -3,7 +3,7 @@ import ManufacturerList from "../../views/order/manufacturerList";
 import store from "../../../store";
 import { connect } from "react-redux";
 import { changeManufacturer } from "../../../redux/actions/actionOrder";
-import { changeManufacturerFilter } from "../../../redux/actions/actionOrder";
+import { changeModel } from "../../../redux/actions/actionOrder";
 
 class ManufacturesContainer extends React.Component {
   constructor(props) {
@@ -14,9 +14,9 @@ class ManufacturesContainer extends React.Component {
   }
 
   handleChangeManufacturer(event) {
-    console.log("ss");
     this.setState({ manufacturer: event.target.value });
     store.dispatch(changeManufacturer(""));
+    store.dispatch(changeModel(""));
   }
 
   handleClickManufacturer(manufacturer) {

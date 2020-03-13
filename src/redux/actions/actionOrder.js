@@ -46,3 +46,10 @@ export function prevOrderStep() {
     type: types.PREV_ORDER_STEP
   };
 }
+
+export function changeModel(model) {
+  return {
+    type: types.CHANGE_MODEL,
+    model
+  };
+}

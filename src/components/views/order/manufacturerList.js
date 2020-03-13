@@ -47,7 +47,7 @@ class ManufacturerList extends React.Component {
   render() {
     return (
       <div>
-        <Typography variant="h3" style={{ textAlign: "left" }}>
+        <Typography variant="h3" style={{ textAlign: "center" }}>
           Выберете марку:
         </Typography>
         <TextField
