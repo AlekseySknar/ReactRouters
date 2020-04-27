@@ -37,7 +37,7 @@ class DeviceInfoInput extends React.Component {
           <TextField
             error={this.props.hasError}
             value={this.props.model}
-            onChange={this.handleChangeModel}
+            onChange={this.props.handleChangeModel}
             label="Модель"
             variant="outlined"
             fullWidth

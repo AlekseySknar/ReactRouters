@@ -35,6 +35,7 @@ class DeviceInfoContainer extends React.Component {
 
   handleChangeModel(event) {
     //this.setState({ model: event.target.value });
+    console.log("one");
     store.dispatch(changeModel(event.target.value));
   }
 }
