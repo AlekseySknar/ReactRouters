@@ -19,13 +19,25 @@ class ProblemDescroption extends React.Component {
           rows={4}
           rowsMax={6}
         />
-        <Button
-          variant="contained"
-          startIcon={<CloudUploadIcon />}
-          color="primary"
-        >
-          Прикрепить фото
-        </Button>
+        <div>
+          <input
+            style={{ display: "none" }}
+            accept="image/*"
+            id="contained-button-file"
+            multiple
+            type="file"
+          />
+          <label htmlFor="contained-button-file">
+            <Button
+              variant="contained"
+              startIcon={<CloudUploadIcon />}
+              color="primary"
+              component="span"
+            >
+              Прикрепить фото
+            </Button>
+          </label>
+        </div>
       </div>
     );
   }
