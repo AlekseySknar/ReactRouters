@@ -12,7 +12,12 @@ const initialState = {
 const orderReducer = function(state = initialState, action) {
   switch (action.type) {
     case types.CHANGE_DEVICE_TYPE:
-      return Object.assign({}, state, { deviceType: action.deviceType });
+      //При изменении типа девайса сбрасываем все данные об устройстве
+      return Object.assign({}, state, {
+        deviceType: action.deviceType,
+        manufacturer: "",
+        model: ""
+      });
 
     case types.CHANGE_MANUFACTURER:
       return Object.assign({}, state, { manufacturer: action.manufacturer });
