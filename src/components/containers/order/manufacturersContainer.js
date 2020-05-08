@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ManufacturerList from "../../views/order/manufacturerList";
 import store from "../../../store";
 import { connect } from "react-redux";
+import * as sourcesApi from "../../../api/sourcesApi";
 import { changeManufacturer } from "../../../redux/actions/actionOrder";
 import { changeModel } from "../../../redux/actions/actionOrder";
 
@@ -11,6 +12,10 @@ class ManufacturesContainer extends React.Component {
     this.state = { manufacturer: "" };
     this.handleChangeManufacturer = this.handleChangeManufacturer.bind(this);
     this.handleClickManufacturer = this.handleClickManufacturer.bind(this);
+  }
+
+  componentDidMount() {
+    sourcesApi.getManufacturers();
   }
 
   handleChangeManufacturer(event) {
